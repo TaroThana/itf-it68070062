@@ -7,8 +7,8 @@
   --stroke: rgba(10, 37, 64, .08);
   --text: #0b1220;
   --muted: #556070;
-  --primary: #0affa9;     /* iOS blue */
-  --primary-2: #66ffb8;   /* gradient tail */
+  --primary: #000000;     /* iOS blue */
+  --primary-2: #000000;   /* gradient tail */
   --ring: rgba(10,132,255,.22);
   --shadow: 0 10px 30px rgba(16,24,40,.10), 0 1px 0 rgba(255,255,255,.25) inset;
 }
