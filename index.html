@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT 68070062</title>
+    <meta name="description" content="ITF Simple Bank — HTML + CSS + JS demo">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <audio id="bgm" preload="auto" src="Assets/error-song.mp3"></audio>
+
+    <nav>
+        <p>68070062</p>
+        <h2>ITF Website</h2>
+        <p>Week 14</p>
+    </nav>
+
+    <div class="container">
+        <div class="w-title">
+            <img src="Assets/Laugh.png" width="96" alt="Laugh" />
+            <div>
+                <h1>ITF Simple Bank</h1>
+                <p>Welcome to my first Website!!</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <div>
+            <div>
+                <label for="log" class="sr-only">Activity Log</label>
+                <textarea id="log" readonly aria-live="polite" spellcheck="false"></textarea>
+            </div>
+
+            <div class="w-content">
+                <div>
+                    <h2 style="margin-top: 16px;">Account Overview</h2>
+
+                    <div class="user-container">
+                        <img src="Assets/user.png" width="64" alt="User" />
+                        <div>
+                            <h3 style="margin-top: 0; margin-left: 0;">Account Information</h3>
+                            Name: Thana Mingboon
+                            <br>
+                            Type: Savings Account
+                        </div>
+                    </div>
+
+                    <div class="user-container">
+                        <img src="Assets/briefcase.png" width="64" alt="Briefcase" />
+                        <div>
+                            <h3 style="margin-top: 0; margin-left: 0;">Balance Information</h3>
+                            <div class="user-balance">
+                                <div>
+                                    <label for="bal_acc">Current account balance:</label>
+                                </div>
+                                <div>
+                                    <input type="number" id="bal_acc" value="1000" min="0" step="0.01" inputmode="decimal">
+                                </div>
+                                <div>
+                                    <label for="bal_cash">Current cash balance:</label>
+                                </div>
+                                <div>
+                                    <input type="number" id="bal_cash" value="500" min="0" step="0.01" inputmode="decimal">
+                                </div>
+                            </div>
+                            <button type="button" onclick="changeBalance()" style="margin-top: 4px;">Change</button>
+                        </div>
+                    </div>
+
+                    <div class="user-container">
+                        <img src="Assets/toolbox.png" width="64" alt="Toolbox" />
+                        <div>
+                            <h3 style="margin-top: 0; margin-left: 0;">Bank Operation</h3>
+                            <label for="process_type" class="sr-only">Operation Type</label>
+                            <select id="process_type">
+                                <option value="deposit">Deposit</option>
+                                <option value="withdraw">Withdraw</option>
+                            </select>
+
+                            <label for="process_amt" class="sr-only">Amount</label>
+                            <input type="number" id="process_amt" value="1" min="1" step="0.01" inputmode="decimal">
+
+                            <button type="button" onclick="proceedOperation()" style="margin-top: 4px;">Proceed</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h2 style="margin-top: 16px;">Financial Tools</h2>
+
+                    <div class="user-container">
+                        <img src="Assets/coins.png" width="64" alt="coins" />
+                        <div>
+                            <h3 style="margin-top: 0; margin-left: 0;">Currency Converter</h3>
+                            <div class="user-balance">
+                                <div>
+                                    <label for="con_in">Input balance:</label>
+                                </div>
+                                <div>
+                                    <input type="number" id="con_in" value="0" min="0" step="0.01" inputmode="decimal">
+                                </div>
+                                <div>
+                                    <label for="con_out">Output balance:</label>
+                                </div>
+                                <div>
+                                    <input type="number" id="con_out" value="0" min="0" step="0.01" disabled>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="con_intype">Input currency:</label>
+                                <select id="con_intype">
+                                    <option value="USD">USD</option>
+                                    <option value="THB">THB</option>
+                                </select>
+
+                                <button type="button" onclick="convertBalance()" style="margin-top: 4px;">Convert</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js" defer></script>
+</body>
+</html>
